@@ -12,7 +12,7 @@ This repository contains my complete portfolio of deliverables for the **FlexiSa
 | **Task 3** | CSS Pre-processors (SASS/SCSS) | [View Demo](https://blaqbeard.github.io/FlexiSaf-Internship/task-3/)  | `task-3` |
 | **Task 4** | Version Control & Git          | [Log & Docs](https://blaqbeard.github.io/FlexiSaf-Internship/task-4/) | `task-4` |
 | **Task 5** | npm/yarn Package Management    | [View Demo](https://blaqbeard.github.io/FlexiSaf-Internship/task-5/)  | `task-5` |
-| **Task 6** | React Fundamentals             | Coming Soon                                                           | `task-6` |
+| **Task 6** | React Fundamentals             | [View Demo](https://blaqbeard.github.io/FlexiSaf-Internship/task-6/)  | `task-6` |
 
 ## 📚 Curriculum Progress
 
