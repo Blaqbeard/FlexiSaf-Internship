@@ -13,6 +13,7 @@ This repository contains my complete portfolio of deliverables for the **FlexiSa
 | **Task 4** | Version Control & Git          | [Log & Docs](https://blaqbeard.github.io/FlexiSaf-Internship/task-4/) | `task-4` |
 | **Task 5** | npm/yarn Package Management    | [View Demo](https://blaqbeard.github.io/FlexiSaf-Internship/task-5/)  | `task-5` |
 | **Task 6** | React Fundamentals             | [View Demo](https://blaqbeard.github.io/FlexiSaf-Internship/task-6/)  | `task-6` |
+| **Task 7** | Styled Components              | [View Demo](https://blaqbeard.github.io/FlexiSaf-Internship/task-7/)  | `task-7` |
 
 ## 📚 Curriculum Progress
 
@@ -78,6 +79,20 @@ This repository contains my complete portfolio of deliverables for the **FlexiSa
   - Component lifecycle
   - Event handling in React
 
+#### Task 7: Styled Components
+
+- **Duration**: 1 week
+- **Focus**: CSS-in-JS with styled-components
+- **Deliverable**: Currency Converter with styled-components
+- **What I Implemented**:
+  - Complete React app using styled-components CSS-in-JS
+  - Converted Task 5 vanilla JS currency converter to React
+  - Modern UI with animations, gradients, and hover effects
+  - Real-time currency conversion with dual API fallback
+  - Responsive design with styled-components
+  - Error handling and loading states
+  - Comprehensive documentation and deployment setup
+
 ## 🛠️ Technical Stack
 
 ### Core Technologies
@@ -87,6 +102,7 @@ This repository contains my complete portfolio of deliverables for the **FlexiSa
 - **JavaScript ES6+**: Modern JavaScript features and array methods
 - **React.js**: Component-based frontend development
 - **SASS/SCSS**: CSS pre-processing and advanced styling
+- **Styled Components**: CSS-in-JS library for component styling
 
 ### Development Tools
 
