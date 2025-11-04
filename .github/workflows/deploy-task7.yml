@@ -1,0 +1,59 @@
+name: Deploy Task 7 - Styled Components Currency Converter
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'task-7/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+          cache-dependency-path: 'task-7/currency converter/package-lock.json'
+
+      - name: Install dependencies
+        run: |
+          cd "task-7/currency converter"
+          npm ci
+
+      - name: Build Task 7
+        run: |
+          cd "task-7/currency converter"
+          npm run build
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: 'task-7/currency converter/dist'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+      - name: Output deployment URL
+        run: |
+          echo "🚀 Task 7 deployed successfully!"
+          echo "📱 Live URL: https://blaqbeard.github.io/FlexiSaf-Internship/task-7/currency%20converter/"
+          echo "🔗 Direct link: https://blaqbeard.github.io/FlexiSaf-Internship/task-7/currency%20converter/dist/"
