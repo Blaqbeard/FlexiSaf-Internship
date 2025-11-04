@@ -40,10 +40,9 @@ jobs:
           cd "task-8/peopleops"
           npm run build
 
-      - name: Prepare artifact under task-8/
+      - name: Sync build to peopleops root
         run: |
-          mkdir -p __site/task-8
-          cp -r task-8/peopleops/dist/* __site/task-8/
+          rsync -a --delete task-8/peopleops/dist/ task-8/peopleops/
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
@@ -51,7 +50,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '__site'
+          path: 'task-8/peopleops'
 
       - name: Deploy to GitHub Pages
         id: deployment
