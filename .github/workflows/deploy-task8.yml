@@ -42,7 +42,10 @@ jobs:
 
       - name: Sync build to task-8 root
         run: |
-          rsync -a --delete task-8/peopleops/dist/ task-8/
+          mkdir -p task-8
+          rm -rf task-8/assets || true
+          rm -f task-8/index.html || true
+          cp -r task-8/peopleops/dist/* task-8/
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
