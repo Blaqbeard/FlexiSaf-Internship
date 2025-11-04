@@ -1,0 +1,65 @@
+name: Deploy Task 8 - PeopleOps
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'task-8/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+          cache-dependency-path: 'task-8/peopleops/package-lock.json'
+
+      - name: Install dependencies
+        run: |
+          cd "task-8/peopleops"
+          npm ci
+
+      - name: Build Task 8
+        run: |
+          cd "task-8/peopleops"
+          npm run build
+
+      - name: Prepare artifact under task-8/
+        run: |
+          mkdir -p __site/task-8
+          cp -r task-8/peopleops/dist/* __site/task-8/
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '__site'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+      - name: Output deployment URL
+        run: |
+          echo "🚀 Task 8 deployed successfully!"
+          echo "📱 Live URL: https://blaqbeard.github.io/FlexiSaf-Internship/task-8/"
+
+

@@ -14,6 +14,7 @@ This repository contains my complete portfolio of deliverables for the **FlexiSa
 | **Task 5** | npm/yarn Package Management    | [View Demo](https://blaqbeard.github.io/FlexiSaf-Internship/task-5/)  | `task-5` |
 | **Task 6** | React Fundamentals             | [View Demo](https://blaqbeard.github.io/FlexiSaf-Internship/task-6/)  | `task-6` |
 | **Task 7** | Styled Components              | [View Demo](https://blaqbeard.github.io/FlexiSaf-Internship/task-7/)  | `task-7` |
+| **Task 8** | Reusable React Components      | [View Demo](https://blaqbeard.github.io/FlexiSaf-Internship/task-8/)  | `task-8` |
 
 ## 📚 Curriculum Progress
 
